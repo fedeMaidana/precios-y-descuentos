@@ -1,3 +1,7 @@
+let price = document.getElementById("inputPrice");
+let discount = document.getElementById("inputDiscount");
+let showResult = document.getElementById("showResult");
+
 function calculatePriceWithDiscount(price, discount){
     let discountedPercentage = 100 - discount;
     let priceWithDiscount = (price * discountedPercentage) / 100;
@@ -5,9 +9,6 @@ function calculatePriceWithDiscount(price, discount){
 }
 
 function getResult(){
-    let price = document.getElementById("inputPrice").value;
-    let discount = document.getElementById("inputDiscount").value;
-    let showResult = document.getElementById("showResult");
-    let result = calculatePriceWithDiscount(price, discount);
-    showResult.innerText = "El total a pagar con el descuento aplicado es de " + result + " pesos";
+    let result = calculatePriceWithDiscount(price.value, discount.value);
+    showResult.innerHTML = "El total a pagar es de " + result + " pesos";
 }

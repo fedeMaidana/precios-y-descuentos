@@ -7,23 +7,32 @@
     <title>Porcentajes y Descuentos</title>
 </head>
 <body>
-    <head>
-        <h1>Calcule su descuento</h1>
-    </head>
-    <section>
-        <h2>Calcula el precio a pagar de tus productos con descuento aplicado</h2>
-        <form>
-            <label for="inputPrice">
-                Ingresa el total a pagar<input type="number" id="inputPrice">
-            </label>
-            <label for="inputDiscount">
-                Ingresa el descuento<input type="number" id="inputDiscount">
-            </label>
-            <button type="button" onclick="getResult()">Calcular precio</button>
-        </form>
-        <p id="showResult"></p>
-    </section>
+    <div class="main-container">
+        <header>
+            <h1>Calcule su descuento</h1>
+        </header>
+        <section>
+            <h2>Calcule el precio a pagar de tus productos con el descuento aplicado</h2>
+            <form>
+                <label for="inputPrice">
+                    Ingrese el total a pagar<br/><input type="number" id="inputPrice">
+                </label>
+                <label for="inputDiscount">
+                    Ingrese el descuento<br/><input type="number" id="inputDiscount">
+                </label>
+                <button type="button" id="button" onclick="getResult()">Calcular precio</button>
+            </form>
+        </section>
+        <div id="result">
+            <h3 id="showResult"></h3>
+        </div>
+        <div id="warning">
+            <h3 id="textWarning"></h3>
+        </div>
+    </div>
 
     <script src="./javascript/discounts.js"></script>
+    <script src="./javascript/show-hidden.js"></script>
+    <script src="./javascript/alert.js"></script>
 </body>
 </html>
